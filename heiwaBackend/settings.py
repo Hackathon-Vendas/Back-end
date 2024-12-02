@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'heiwa'
 ]
 
+AUTH_USER_MODEL = "heiwa.user"
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

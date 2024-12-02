@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from heiwa.models import order
+from heiwa.models import order, User
 
 class orderSerializer(ModelSerializer):
     class Meta:
@@ -11,4 +11,12 @@ class orderSerializer(ModelSerializer):
             "description",
             "mesa",
             "status"
+        ]
+
+class userSerializer(ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            "password",
+            "username"
         ]
