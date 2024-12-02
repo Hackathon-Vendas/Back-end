@@ -6,7 +6,7 @@ class StatusCompra(models.IntegerChoices):
         PRONTO = 3, 'Pronto'
 
 
-class orders (models.Model):
+class order (models.Model):
     tittleProduto = models.CharField(max_length=255)
     description = models.CharField(max_length=255, blank=True, null=True)
     mesa = models.IntegerField(max_length=2)
