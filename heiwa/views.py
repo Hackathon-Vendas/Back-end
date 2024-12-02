@@ -2,10 +2,10 @@ from django.shortcuts import render
 
 from rest_framework.viewsets import ModelViewSet
 
-from heiwa.models import orders
-from heiwa.serializers import ordersSerializer
+from heiwa.models import order
+from heiwa.serializers import orderSerializer
 
-class ordersViewSet(ModelViewSet):
-    queryset = orders.objects.all()
-    serializer_class = ordersSerializer
+class orderViewSet(ModelViewSet):
+    queryset = order.objects.all()
+    serializer_class = orderSerializer
 # Create your views here.
