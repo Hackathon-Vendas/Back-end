@@ -1,10 +1,10 @@
 from rest_framework.serializers import ModelSerializer
 
-from heiwa.models import order, User
+from heiwa.models import Order, User
 
-class orderSerializer(ModelSerializer):
+class OrderSerializer(ModelSerializer):
     class Meta:
-        model = order
+        model = Order
         fields = [
             "id",
             "tittleProduto",

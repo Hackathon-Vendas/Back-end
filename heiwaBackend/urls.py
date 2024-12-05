@@ -21,10 +21,10 @@ from django.urls import include, path
 
 from rest_framework.routers import DefaultRouter
 
-from heiwa.views import orderViewSet, userViewSet
+from heiwa.views import OrderViewSet, userViewSet
 
 router = DefaultRouter()
-router.register(r"order", orderViewSet)
+router.register(r"order", OrderViewSet)
 router.register(r"user", userViewSet)
 
 urlpatterns = [
