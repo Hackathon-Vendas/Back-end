@@ -21,7 +21,7 @@ from django.urls import include, path
 
 from rest_framework.routers import DefaultRouter
 
-from heiwa.views import OrderViewSet, userViewSet
+from heiwa.views import OrderViewSet, userViewSet, MesaViewSet
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -32,6 +32,7 @@ from rest_framework_simplejwt.views import (
 router = DefaultRouter()
 router.register(r"order", OrderViewSet)
 router.register(r"user", userViewSet)
+router.register(r"mesa", MesaViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
