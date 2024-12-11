@@ -2,10 +2,9 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class Mesa(models.Model):
-     numeroMesa = models.IntegerField(unique=True)
 
      def __str__(self):
-        return str(self.numeroMesa)
+        return str(self.id)
 
 
 class StatusCompra(models.IntegerChoices):

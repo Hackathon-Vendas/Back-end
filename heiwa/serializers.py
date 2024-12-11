@@ -18,7 +18,6 @@ class MesaSerializer(ModelSerializer):
         model = Mesa
         fields = [
             "id"
-            "numeroMesa"
         ]
 
 class userSerializer(ModelSerializer):
