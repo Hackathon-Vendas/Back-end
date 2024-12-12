@@ -33,12 +33,12 @@ class MPagoViewSet(ViewSet):
 
         payment_data = {
             "items": [
-                {'id': 1, 'title': 'Produtos', "quantity": 1, "currency_id": "BRL", "unit_price": 250}
+                {'id': 1, 'title': 'teste', "quantity": 1, "currency_id": "BRL", "unit_price": 250}
             ],
             "back_urls": {
                 "success": "http://localhost:5173/",
-                "failure":"http://127.0.0.1:8000/mercadop/compraerrada/",
-                "pending": "http://127.0.0.1:8000/mercadop/compraerrada/",
+                "failure":"http://localhost:5173/",
+                "pending": "http://localhost:5173/",
             },
             
             "auto_return": "all",
