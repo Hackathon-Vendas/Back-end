@@ -1,7 +1,5 @@
 from django.shortcuts import render
-
-from rest_framework.viewsets import ModelViewSet
-
+from rest_framework.viewsets import ModelViewSet, ViewSet
 from heiwa.models import Order, User, Mesa
 from heiwa.serializers import OrderSerializer, userSerializer, MesaSerializer
 
@@ -9,11 +7,20 @@ class OrderViewSet(ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
 
-class userViewSet(ModelViewSet):
+class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = userSerializer
 
 class MesaViewSet(ModelViewSet):
     queryset = Mesa.objects.all()
     serializer_class = MesaSerializer
-# Create your views here.
+
+class MPagoViewSet(ViewSet):
+    def homepage(self, req):
+        return render(req, 'homepage.html')
+
+    def compracerta(self, req):
+        return render(req, 'compracerta.html')
+
+    def compraerrada(self, req):
+        return render(req, 'compraerrada.html')
