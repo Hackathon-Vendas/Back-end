@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.viewsets import ModelViewSet, ViewSet
 
 from heiwa.models import Order, User, Mesa
 from heiwa.serializers import OrderSerializer, userSerializer, MesaSerializer
