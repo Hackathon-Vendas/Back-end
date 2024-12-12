@@ -20,3 +20,4 @@ urlpatterns = [
     path('mercadop/compracerta/', MPagoViewSet.as_view({'get': 'compracerta'}), name='compracerta'),
     path('mercadop/compraerrada/', MPagoViewSet.as_view({'get': 'compraerrada'}), name='compraerrada'),
 ]
+

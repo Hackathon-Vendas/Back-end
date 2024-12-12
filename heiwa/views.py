@@ -3,9 +3,7 @@ from django.http import JsonResponse
 from rest_framework.viewsets import ModelViewSet, ViewSet
 from heiwa.serializers import OrderSerializer, userSerializer, MesaSerializer
 import mercadopago
-
 from heiwa.models import Order, User, Mesa
-
 
 
 class OrderViewSet(ModelViewSet):
