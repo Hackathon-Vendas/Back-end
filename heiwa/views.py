@@ -36,7 +36,7 @@ class MPagoViewSet(ViewSet):
                 {'id': 1, 'title': 'Produtos', "quantity": 1, "currency_id": "BRL", "unit_price": 250}
             ],
             "back_urls": {
-                "success": "http://127.0.0.1:8000/mercadop/compracerta/",
+                "success": "http://localhost:5173/",
                 "failure":"http://127.0.0.1:8000/mercadop/compraerrada/",
                 "pending": "http://127.0.0.1:8000/mercadop/compraerrada/",
             },
