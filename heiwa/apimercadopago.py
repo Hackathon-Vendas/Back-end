@@ -1,5 +1,5 @@
 
-def gerar_link_pagamento():
+# def gerar_link_pagamento():
     
 
     
