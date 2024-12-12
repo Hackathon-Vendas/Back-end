@@ -15,6 +15,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('mercadop/redirect',  MPagoViewSet.as_view({'get': 'redirect'}), name='homepage'),
     path('mercadop/homepage/', MPagoViewSet.as_view({'get': 'homepage'}), name='homepage'),
     path('mercadop/compracerta/', MPagoViewSet.as_view({'get': 'compracerta'}), name='compracerta'),
     path('mercadop/compraerrada/', MPagoViewSet.as_view({'get': 'compraerrada'}), name='compraerrada'),
