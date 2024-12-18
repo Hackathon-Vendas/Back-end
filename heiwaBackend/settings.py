@@ -39,12 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "drf_spectacular",
     "rest_framework",
-    'heiwa'
+    "corsheaders",
+    'heiwa',
+    'rest_framework_simplejwt',
 ]
+
+AUTH_USER_MODEL = "heiwa.user"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -71,6 +76,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'heiwaBackend.wsgi.application'
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Database
@@ -124,3 +131,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+REST_FRAMEWORK = {
+    #'DEFAULT_PERMISSION_CLASSES': [
+    #    'rest_framework.permissions.DjangoModelPermissions'],
+    'DEFAULT_AUTHENTICATION_CLASSES': ( 
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+    
+}
+
