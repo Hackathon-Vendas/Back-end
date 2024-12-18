@@ -17,6 +17,7 @@ class MesaSerializer(ModelSerializer):
     class Meta:
         model = Mesa
         fields = [
+            "mesaNumber",
             "id"
         ]
 
